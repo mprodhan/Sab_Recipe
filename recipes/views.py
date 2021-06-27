@@ -6,5 +6,5 @@ from recipes_user.models import RecipeUser
 
 def index(request):
     html = "index.html"
-    return render(html)
+    return render(request, html)
 
