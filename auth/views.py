@@ -4,7 +4,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm
 
 from auth.forms import LoginForm, SignUpForm
-from recipe_users.models import RecipeUser
+from recipes_user.models import RecipeUser
 
 def signup_view(request):
     html = "signup.html"

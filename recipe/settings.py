@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from patthlib import Path
+from pathlib import Path
 from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Installed modular apps
-    'auth.apps.AuthConfig',
+    # 'auth.apps.AuthConfig',
     'blogs.apps.BlogsConfig',
     'recipes.apps.RecipesConfig',
     'recipes_user.apps.RecipesUserConfig'
@@ -130,3 +130,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR), 'static']
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join((BASE_DIR), 'media')
+
+AUTH_USER_MODEL = 'recipes_user.RecipeUser'
