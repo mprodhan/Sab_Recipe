@@ -36,6 +36,6 @@ def login_view(request):
     context = {"form": form}
     return render(request, html, context)
 
-def logoutview(request):
+def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse('login'))
