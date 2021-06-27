@@ -1,5 +1,5 @@
 from django.shortcuts import render, reverse, HttpResponseRedirect, \
-    HtttpResponse
+    HttpResponse
 from recipes.models import Food
 from recipes.forms import RecipeForm
 from recipes_user.models import RecipeUser
