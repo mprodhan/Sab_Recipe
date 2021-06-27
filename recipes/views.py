@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse, HttpResponseRedirect, \
+    HtttpResponse
+from recipes.models import Food
+from recipes.forms import RecipeForm
+from recipes_user.models import RecipeUser
 
-# Create your views here.
+def index(request):
+    html = "index.html"
+    return render(html)
+
