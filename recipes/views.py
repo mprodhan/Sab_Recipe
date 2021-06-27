@@ -16,11 +16,11 @@ def recipe(request):
         form = RecipeForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data
-            Food.object.create(
+            Food.objects.create(
                 food_title=data['food_title'],
                 ingredients=data['ingredients'],
                 directions=data['directions'],
-                food_author=data['food_image']
+                food_author=data['food_author']
             )
             return HttpResponseRedirect(reverse('homepage'))
     else:
@@ -28,7 +28,7 @@ def recipe(request):
     context = {'form': form}
     return render(request, html, context)
 
-def recipedetail(request, username):
+def recipe_detail(request, username):
     html = "recipe_page.html"
     author = RecipeUser.objects.get(username=username)
     author = request.user
